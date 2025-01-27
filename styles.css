@@ -1,0 +1,249 @@
+/* Global Styles */
+/* Make the html and body fill the viewport */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    font-family: Arial, sans-serif; /* Regular font */
+
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Navbar Styles */
+nav {
+    background-color: #4CAF50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    position: relative;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 40px;
+    font-size: 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #3e8e41;
+}
+
+/* Dropdown Styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 140px;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    left: 0; /* Default alignment to the left */
+    transform: translateX(0); /* Default alignment */
+    max-width: 90vw; /* Ensure dropdown width fits the screen */
+    overflow-x: auto; /* Prevent content from breaking the layout */
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    border-bottom: 1px solid #f1f1f1;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #f9f9f9;
+}
+
+nav li:hover .dropdown-content {
+    display: block;
+}
+
+/* Adjust dropdown to prevent overflowing the viewport */
+.dropdown-content {
+    right: auto;
+}
+
+nav li:hover .dropdown-content {
+    display: block;
+    /* If dropdown overflows the screen, adjust its position dynamically */
+    right: 0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+/* Input and Button Styles */
+label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+select, input, button {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #3e8e41;
+    transform: scale(1.02);
+}
+
+/* Food List Styles */
+.food-list {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.food-item {
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.food-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.food-item h3 {
+    margin: 0 0 10px;
+    color: #4CAF50;
+    font-size: 18px;
+}
+
+.food-item p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.food-item strong {
+    color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .food-list {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-top: 10px;
+    }
+}
+.donation-button {
+    display: inline-block;
+    background-color: #0070ba;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+.donation-button:hover {
+    background-color: #005a96;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+    flex-shrink: 0; /* Prevents shrinking when content grows */
+    margin-top: auto; /* Pushes footer to the bottom of the viewport if needed */
+}
+.iframe-container {
+    flex-grow: 1; /* Fills available space between navbar and footer */
+    padding: 0; /* Remove padding to allow full stretching */
+    display: flex; /* Flexbox for centering and resizing */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.iframe-container iframe {
+    width: 100%; /* Stretch horizontally */
+    height: 100%; /* Stretch vertically */
+    border: none; /* Remove iframe border */
+}

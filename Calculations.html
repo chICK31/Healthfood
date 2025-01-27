@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Ranking System</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+</head>
+<body>
+    <nav>
+        <a href="/index.html" class="brand">Food Ranking System</a>
+        <ul class="nav-links">
+            <li><a href="/index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Resources</a>
+                <div class="dropdown-content">
+                    <a href="/Calculations.html">How We Make Health Calculations</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">About</a>
+                <div class="dropdown-content">
+                    <a href="/Mission.html">Our Mission</a>
+                    <a href="/Contact.html">Contact Us</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    
+    <header style="text-align: center; margin-top: 20px;">
+        <h1>Welcome to the Food Ranking System</h1>
+        <p>Discover how different foods stack up based on nutritional content and health scores.</p>
+        <p>Our mission is to help you avoid inflammation—the devil—and make healthier choices for a better lifestyle.</p>
+    </header>
+    
+    <section style="margin: 20px; line-height: 1.6;">
+        <h2>How the Health Score Works</h2>
+        <p>We calculate a food's health score starting at <strong>100</strong>, assuming it’s perfectly healthy, and adjust it based on the following:</p>
+        
+        <ul>
+            <li><strong>Sugars (Bad News!)</strong> – Sugars cause inflammation, which is the devil in disguise. For every gram of sugar, we reduce the score because sugar fuels inflammation, leading to fatigue, joint pain, and other serious health issues.</li>
+            <li><strong>Carbohydrates (Depends on the Type)</strong> – While some carbs are healthy, others can stoke inflammation. We subtract the total carbs from the score, assuming excess carbs can be harmful.</li>
+            <li><strong>Protein (The Hero!)</strong> – Protein is great for your body and helps fight inflammation. For every gram of protein, we <strong>add double</strong> the value to the score because protein repairs tissues and promotes good health.</li>
+            <li><strong>Red Flags in Ingredients</strong> – If we spot inflammatory ingredients like <em>Red 40</em>, <em>GMOs</em>, or <em>pesticides</em>, we penalize the score by <strong>20 points</strong>. These additives are major contributors to inflammation.</li>
+            <li><strong>Branded Foods</strong> – Processed and packaged foods lose <strong>15 points</strong> because they often contain hidden sugars, bad fats, or additives that promote inflammation.</li>
+        </ul>
+    
+        <h2>Why Inflammation is the Devil</h2>
+        <p>Inflammation is your body’s way of healing, but chronic inflammation caused by sugar, bad carbs, and processed foods can lead to:</p>
+        <ul>
+            <li>Heart disease</li>
+            <li>Diabetes</li>
+            <li>Arthritis</li>
+            <li>Obesity</li>
+            <li>Brain fog and mood swings</li>
+        </ul>
+        <p>The health score helps you spot these "devil foods" so you can avoid them and make choices that leave you feeling great and energized.</p>
+    </section>
+    
+
+    <footer>
+        <p>Designed to help you live a healthier life.</p>
+        <a href="https://www.paypal.com/ncp/payment/XEVE3BRMJYFKL" target="_blank" class="donation-button">Donate Now</a>
+    </footer>
+</body>
+</html>
