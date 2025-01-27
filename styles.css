@@ -185,33 +185,7 @@ button:hover {
     color: #333;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    nav {
-        flex-wrap: wrap;
-        padding: 10px;
-    }
 
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    nav a {
-        font-size: 14px;
-        padding: 8px 15px;
-    }
-
-    .food-list {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-
-    h1 {
-        font-size: 24px;
-        margin-top: 10px;
-    }
-}
 .donation-button {
     display: inline-block;
     background-color: #0070ba;
@@ -246,4 +220,162 @@ footer {
     width: 100%; /* Stretch horizontally */
     height: 100%; /* Stretch vertically */
     border: none; /* Remove iframe border */
+}
+.progress-container {
+    width: 100%;
+    background-color: #f3f3f3;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 20px 0;
+    height: 20px;
+    position: relative;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    transition: width 0.2s ease;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align all child elements */
+    justify-content: center;
+    width: 100%;
+    max-width: 400px; /* Ensure a consistent max width */
+    margin: 10px auto; /* Add margin for spacing */
+    padding: 15px; /* Adjust padding for smaller screens */
+    background-color: #f9f9f9; /* Optional background color */
+    border-radius: 10px; /* Rounded corners for aesthetics */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+form label {
+    width: 100%; /* Ensure labels span the full width */
+    font-size: 14px; /* Adjust font size for better readability on small screens */
+    margin-bottom: 8px; /* Reduce margin for tighter spacing */
+    text-align: left; /* Align labels to the left for better UX */
+}
+
+form input, form select, form button {
+    width: 100%; /* Make elements take full width */
+    margin-bottom: 15px; /* Add spacing between elements */
+    font-size: 16px; /* Increase readability */
+    padding: 10px; /* Add padding for touch-friendly elements */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    border: 1px solid #ddd; /* Define a light border */
+    border-radius: 5px; /* Add rounded corners for a modern look */
+    text-align: center; /* Center-align text inside inputs */
+}
+
+form select {
+    text-align-last: center; /* Center the selected option in dropdowns */
+    appearance: none; /* Remove default browser styling */
+    background-color: #ffffff; /* Set a light background color */
+    color: #333; /* Define text color */
+}
+
+form button {
+    cursor: pointer;
+    font-size: 16px; /* Ensure buttons are readable on smaller screens */
+    background-color: #4CAF50; /* Consistent button color */
+    color: white; /* White text for contrast */
+    padding: 10px; /* Add padding for touch-friendly buttons */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Add rounded corners */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add hover effects */
+}
+
+form button:hover {
+    background-color: #3e8e41; /* Darken background color on hover */
+    transform: scale(1.02); /* Slightly enlarge the button */
+}
+
+form #cancel-fetch {
+    margin-top: -10px;
+    background-color: red; /* Red cancel button for visibility */
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Prevent horizontal scrolling */
+    html, body {
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+        width: 100%; /* Ensure no content overflows the viewport */
+    }
+
+    nav {
+        flex-wrap: wrap; /* Allow navigation items to wrap */
+        padding: 10px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 8px 15px;
+        text-align: center; /* Center align for better appearance */
+        box-sizing: border-box; /* Prevent padding from breaking layout */
+        width: 100%; /* Ensure navigation links fit within the viewport */
+    }
+
+    .food-list {
+        grid-template-columns: 1fr; /* Single column layout for smaller screens */
+        gap: 10px; /* Reduce spacing */
+        padding: 10px; /* Adjust padding */
+        width: 100%; /* Ensure the grid doesn't overflow */
+        box-sizing: border-box; /* Account for padding and borders */
+    }
+
+    h1 {
+        font-size: 24px; /* Adjust font size for headings */
+        margin-top: 10px;
+        padding: 0 10px; /* Add some padding to avoid overflow */
+        box-sizing: border-box; /* Ensure proper sizing */
+    }
+
+    .dropdown-content {
+        max-width: 100%; /* Ensure dropdown fits within the screen width */
+        left: 0; /* Align dropdown to the left */
+        box-sizing: border-box; /* Prevent padding from causing overflow */
+    }
+
+    form {
+        padding: 10px; /* Reduce padding on smaller screens */
+        margin: 0 auto; /* Center the form horizontally */
+        max-width: 90%; /* Ensure form fits within the viewport */
+        width: 100%; /* Make form responsive */
+        box-sizing: border-box; /* Prevent layout breaking due to padding */
+        display: flex; /* Use flexbox for alignment */
+        flex-direction: column; /* Stack form elements vertically */
+        align-items: center; /* Center-align form elements */
+    }
+
+    form input, form select, form button {
+        font-size: 14px; /* Reduce font size for smaller screens */
+        padding: 8px; /* Adjust padding */
+        width: 100%; /* Ensure elements fit within the form */
+        box-sizing: border-box; /* Prevent layout breaking due to padding */
+    }
+
+    form button {
+        font-size: 14px; /* Ensure button text is readable */
+    }
+
+    footer {
+        font-size: 14px; /* Adjust footer text size */
+        padding: 10px; /* Reduce padding */
+        width: 100%; /* Prevent footer from overflowing */
+        box-sizing: border-box; /* Account for padding and borders */
+    }
+}
+.search-link {
+    color: blue;
+    text-decoration: underline;
+    margin-top: 5px;
+    display: inline-block;
+}
+.search-link:hover {
+    color: darkblue;
 }

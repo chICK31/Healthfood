@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Ranking System</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
-
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -28,7 +27,6 @@
             </li>
         </ul>
     </nav>
-    
 
     <!-- Main Content -->
     <h1>Food Ranking System</h1>
@@ -41,19 +39,31 @@
             <option value="bare_minimum_healthy">Bare Minimum Healthy</option>
             <option value="unhealthy">Unhealthy</option>
             <option value="extremely_unhealthy">Extremely Unhealthy</option>
+            <option value="no_filter">No Health Filter</option>
         </select>
-
+    
         <label for="include-unknown">Include Unknown Nutritional Content:</label>
         <select id="include-unknown">
             <option value="yes">Yes</option>
             <option value="no">No</option>
         </select>
-
+    
         <label for="search">Search Food:</label>
         <input type="text" id="search" placeholder="Enter food name">
-
+    
+        <label for="num-foods">Number of Foods to Display:</label>
+        <select id="num-foods">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            <option value="200">200</option>
+        </select>
+    
         <button id="fetch-foods">Fetch and Rank Foods</button>
+        <button id="cancel-fetch" style="background-color: red; color: white; border: none; padding: 10px; border-radius: 5px;">Cancel</button>
     </form>
+    
 
     <div class="food-list" id="food-list"></div>
 
